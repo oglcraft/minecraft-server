@@ -5,7 +5,6 @@ RUN apk --no-cache add curl jq
 # set variables
 ARG version
 ARG type=release
-ARG port=25565
 ENV meta_url https://launchermeta.mojang.com/mc/game/version_manifest.json
 
 # pull down server jar of the appropriate version 
@@ -34,6 +33,6 @@ VOLUME /data
 WORKDIR /data
 
 # expose default port
-EXPOSE $port
+EXPOSE 25565
 
 ENTRYPOINT echo "eula=TRUE" > eula.txt && java -jar /server.jar
