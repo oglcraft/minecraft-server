@@ -19,12 +19,10 @@ RUN if [ "$version" = "" ] ; then \
   curl -s $JAR_URL -o server.jar
 
 # stage 2: install JRE and run MC server
-FROM alpine
+FROM openjdk:8-jre
 
 # hate mail
 MAINTAINER Jesse Pritchett <jesse.h.pritchett@gmail.com>
-
-RUN apk --no-cache add openjdk8-jre
 
 COPY --from=download /server.jar /
 
