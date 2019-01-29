@@ -33,4 +33,4 @@ WORKDIR /data
 # expose default port
 EXPOSE 25565
 
-ENTRYPOINT echo "eula=TRUE" > eula.txt && java -jar /server.jar
+ENTRYPOINT echo "eula=TRUE" > eula.txt && java $JAVA_OPTS -jar /server.jar
