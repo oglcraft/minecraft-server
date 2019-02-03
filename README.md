@@ -3,10 +3,7 @@ A version-agnostic Vanilla Minecraft Server Dockerfile
 
 ### To build (defaults to latest version)
 ```
-$ docker build https://github.com/oglcraft/minecraft-server.git \
-    -t oglcraft/minecraft-server:latest \
-    [-t oglcraft/minecraft-server:<version>] \
-    [--build-arg version=<version>]
+$ docker build https://github.com/oglcraft/minecraft-server.git -t oglcraft/minecraft-server:latest [-t oglcraft/minecraft-server:<version>] [--build-arg version=<version>]
 ```
 
 ### To run
