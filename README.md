@@ -1,5 +1,5 @@
 # minecraft-server
-A version-agnostic Vanilla Minecraft Server in a docker container
+A version-agnostic Vanilla Minecraft Server Dockerfile
 
 ### To build (defaults to latest version)
 ```
