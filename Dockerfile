@@ -9,7 +9,7 @@ ENV meta_url https://launchermeta.mojang.com/mc/game/version_manifest.json
 
 # pull down server jar of the appropriate version 
 RUN if [ "$version" = "" ] ; then \
-    version=$(curl -s $meta_url | jq -r '.latest.$type') \
+    version=$(curl -s $meta_url | jq -r ".latest.$type") \
   ; fi && \
   VERSION_URL=$(curl -s $meta_url | \
     jq -r --arg VERSION "$version" \
